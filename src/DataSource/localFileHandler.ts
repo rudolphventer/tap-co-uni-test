@@ -2,7 +2,7 @@ import * as fsPromise from 'fs/promises';
 
 /**
  * Reads a file from the file system asynchronously.
- * 
+ *
  * @remark
  * Also trims whitespace from the start and end of the file contents.
  *
@@ -17,7 +17,6 @@ export async function readFile(path: string): Promise<string> {
         throw error;
     }
 }
-
 
 /**
  * Reads a file from the file system asynchronously and trims whitespace
