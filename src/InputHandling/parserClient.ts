@@ -1,6 +1,12 @@
 import { emptyInput } from '../customErrors';
 import { parsedInput, unvalidatedStudent } from '../sharedTypes';
 
+/**
+ * Parses a string value into a JSON object of the parsedInput type.
+ *
+ * @param inputString - A student/mark list.
+ * @returns inputString parsed into an object with student and mark details.
+ */
 export function parseInput(inputString: string): parsedInput {
     try {
         if (inputString.length === 0) throw emptyInput;

@@ -1,6 +1,12 @@
 import { SUBJECTS } from '../constants';
 import { structuredInput, structuredStudent, unstructuredStudent, validatedInput } from '../sharedTypes';
 
+/**
+ * Structures the given student/mark list into the structuredInput format.
+ *
+ * @param studentList - A validated student/mark list.
+ * @returns inputString parsed into a structuredInput object.
+ */
 export function structureInput(studentList: validatedInput): structuredInput {
     return {
         ...studentList,

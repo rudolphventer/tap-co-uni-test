@@ -6,6 +6,11 @@ import { outputToInterface } from './OutputHandling/outputHandler';
 import { calculatePassingStudents } from './PassChecking/passRuleChecker';
 import { parsedInput, structuredInput, validatedInput } from './sharedTypes';
 
+/**
+ * The main method to drive the application logic.
+ *
+ * @returns A promise that resolves to true or rejects to an error.
+ */
 async function mainHandler(): Promise<boolean> {
     try {
         const unparsedInput = await fetchStudentData();
