@@ -16,3 +16,6 @@ export type structuredStudent = Omit<unstructuredStudent, 'marks'> & {
     marks: { subjectName: string | undefined; mark: number }[];
 };
 export type structuredInput = { count: number; students: structuredStudent[] };
+
+// Pass/Fail checking
+export type passRule = (student: structuredStudent) => boolean;

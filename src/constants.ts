@@ -1,3 +1,6 @@
+import { HumanitiesPass, sciencePass } from './PassChecking/passRuleFactory';
+import { passRule } from './sharedTypes';
+
 export const SUBJECTS: Map<number, string> = new Map([
     [0, 'English'],
     [1, 'Math'],
@@ -6,9 +9,9 @@ export const SUBJECTS: Map<number, string> = new Map([
     [4, 'Geography/History'],
 ]);
 
-export const FACULTIES: { name: string; shortHand: string; passCheck: any }[] = [
-    { name: 'Humanities', shortHand: 'l', passCheck: () => true },
-    { name: 'Science', shortHand: 's', passCheck: () => true },
+export const FACULTIES: { name: string; shortHand: string; passRule: passRule }[] = [
+    { name: 'Humanities', shortHand: 'l', passRule: HumanitiesPass },
+    { name: 'Science', shortHand: 's', passRule: sciencePass },
 ];
 
 export const MARKBOUNDS: { max: number; min: number } = { max: 100, min: 0 };
