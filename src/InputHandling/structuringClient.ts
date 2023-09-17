@@ -1,7 +1,6 @@
 import { SUBJECTS } from '../constants';
 import { structuredInput, structuredStudent, unstructuredStudent, validatedInput } from '../sharedTypes';
 
-// No error handling here because any errors with the data would have been caught during parsing or validation, this is simply formatting.
 export function structureInput(studentList: validatedInput): structuredInput {
     return {
         ...studentList,
