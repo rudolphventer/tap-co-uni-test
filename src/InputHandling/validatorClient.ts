@@ -9,13 +9,13 @@ import {
 } from '../customErrors';
 import { parsedInput, unstructuredStudent, unvalidatedStudent, validatedInput } from '../sharedTypes';
 
-export function parseMark(mark: string): number {
+function parseMark(mark: string): number {
     if (isNaN(parseInt(mark))) throw markInvalid;
     if (MARKBOUNDS.min > parseInt(mark) || MARKBOUNDS.max < parseInt(mark)) throw markOutOfRange;
     return parseInt(mark);
 }
 
-export function parseFaculty(faculty: string): string {
+function parseFaculty(faculty: string): string {
     if (!faculty || !FACULTIES.some((entry) => entry.shortHand === faculty)) throw facultyInvalid;
     return faculty;
 }
@@ -35,7 +35,7 @@ export function validateInput(studentList: parsedInput): validatedInput {
             }),
         };
     } catch (error) {
-        console.error(`Input validation failed on input ${studentList}`);
+        console.error(`Input validation failed on input ${JSON.stringify(studentList)}`);
         throw error;
     }
 }
