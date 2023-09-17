@@ -15,3 +15,4 @@ export const FACULTIES: { name: string; shortHand: string; passRule: passRule }[
 ];
 
 export const MARKBOUNDS: { max: number; min: number } = { max: 100, min: 0 };
+export const INPUTFILEPATH: string = './tests/SampleInputs/sampleInput_1.txt';
